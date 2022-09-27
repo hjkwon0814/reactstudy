@@ -28,6 +28,17 @@ function App() {
     }
   ])
 
+  const onToggle = useCallback(
+    (id) => {
+      setTodos(
+        todos.map((todo) =>
+          todo.id === id ? { ...todo, checked: !todo.checked} : todo,
+          ),
+      )
+    },
+    [todos],
+  )
+
   const nextId = useRef(4);
   const onInsert = useCallback(
     (text) => {
@@ -41,6 +52,13 @@ function App() {
     },
     [todos],
   );
+
+  const onRemove = useCallback(
+    (id) => {
+      setTodos(todos.filter((todo) => todo.id !== id));
+    },
+    [todos],
+  )
   
 
   return (

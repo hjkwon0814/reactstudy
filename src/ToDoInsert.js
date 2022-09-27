@@ -10,11 +10,12 @@ function ToDoInsert({onInsert}) {
     },[])
     const onSubmit = useCallback(
         e => {
+            onInsert(value);
             setValue(''); //value 초기화
             //기본이벤트(새로고침) 방지
             e.preventDefault();
         }
-    ,[value])
+    ,[onInsert,value])
 
     return (
         <form className="TodoInsert" onSubmit={onSubmit}>
