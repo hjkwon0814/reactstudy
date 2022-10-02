@@ -65,7 +65,7 @@ function App() {
     <div className="App">
         <ToDoInsert onInsert={onInsert} />
         <TodoList
-          todos={ todos } onRemove = {onRemove}
+          todos={ todos } onRemove = {onRemove} onToggle = {onToggle}
         />
     </div>
   );
