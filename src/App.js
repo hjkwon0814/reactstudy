@@ -63,6 +63,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className="black-nav">
+        <h4 className='black-nav-title'>Todolist</h4>
+      </div>
         <ToDoInsert onInsert={onInsert} />
         <TodoList
           todos={ todos } onRemove = {onRemove} onToggle = {onToggle}
