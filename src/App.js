@@ -63,13 +63,9 @@ function App() {
 
   return (
     <div className="App">
-      <div className='black-nav'>
-        <h4>블로그임</h4>
-      </div>
-      <h4 style={ {color : 'red', fontSize : '16px'}}>{post}</h4>
         <ToDoInsert onInsert={onInsert} />
         <TodoList
-          todos={ todos }
+          todos={ todos } onRemove = {onRemove}
         />
     </div>
   );
